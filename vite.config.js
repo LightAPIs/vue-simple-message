@@ -1,0 +1,39 @@
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import VueSetupExtend from 'vite-plugin-vue-setup-extend';
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
+import copy from 'rollup-plugin-copy';
+import path from 'path';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  build: {
+    outDir: 'publish',
+    lib: {
+      entry: path.resolve(__dirname, './src/components/index.ts'),
+      name: 'SimpleMessage',
+      fileName: 'index',
+    },
+    rollupOptions: {
+      external: ['vue'],
+      output: {
+        globals: {
+          vue: 'Vue',
+        },
+      },
+    },
+  },
+  plugins: [
+    vue(),
+    VueSetupExtend(),
+    cssInjectedByJsPlugin(),
+    copy({
+      targets: [
+        { src: 'package.json', dest: 'publish' },
+        { src: 'README.md', dest: 'publish' },
+        { src: 'LICENSE', dest: 'publish' },
+      ],
+      hook: 'writeBundle',
+    }),
+  ],
+});

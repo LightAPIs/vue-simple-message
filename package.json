@@ -1,0 +1,42 @@
+{
+  "name": "vue-simple-message",
+  "private": false,
+  "version": "0.1.0",
+  "description": "A Vue component that displays notification messages",
+  "type": "module",
+  "license": "MIT",
+  "author": "Light",
+  "homepage": "https://github.com/LightAPIs/vue-simple-message",
+  "repository": "LightAPIs/vue-simple-message",
+  "keywords": [
+    "vue",
+    "component",
+    "message",
+    "plugin"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "eslint": "^8.50.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.5",
+    "vite-plugin-css-injected-by-js": "^3.3.0",
+    "vite-plugin-vue-setup-extend": "^0.4.0"
+  },
+  "publishConfig": {
+    "directory": "publish"
+  }
+}
