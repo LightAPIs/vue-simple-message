@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import VueSetupExtend from 'vite-plugin-vue-setup-extend';
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
+import dts from 'vite-plugin-dts';
 import copy from 'rollup-plugin-copy';
 import path from 'path';
 
@@ -27,6 +28,7 @@ export default defineConfig({
     vue(),
     VueSetupExtend(),
     cssInjectedByJsPlugin(),
+    dts({ rollupTypes: true }),
     copy({
       targets: [
         { src: 'package.json', dest: 'publish' },

@@ -12,7 +12,7 @@ function install(app: App) {
 
 export { SimpleMessage };
 
-export { NotificationType, NotificationItem };
+export type { NotificationType, NotificationItem };
 
 export default {
   install,

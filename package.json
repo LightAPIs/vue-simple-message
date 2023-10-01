@@ -1,7 +1,7 @@
 {
   "name": "vue-simple-message",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Vue component that displays notification messages",
   "type": "module",
   "license": "MIT",
@@ -34,6 +34,7 @@
     "typescript": "^5.2.2",
     "vite": "^4.4.5",
     "vite-plugin-css-injected-by-js": "^3.3.0",
+    "vite-plugin-dts": "^3.6.0",
     "vite-plugin-vue-setup-extend": "^0.4.0"
   },
   "publishConfig": {
