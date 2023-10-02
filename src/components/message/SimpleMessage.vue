@@ -1,4 +1,21 @@
 <template>
+  <div style="display: none">
+    <svg
+      id="simpleMessageCloseIcon"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+      width="18px"
+      height="18px"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      fill="none"
+      stroke="rgba(0, 0, 0, 0.6)"
+    >
+      <path d="M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575" />
+    </svg>
+  </div>
   <div class="vue-simple-message-frame-presentation">
     <transition-group tag="div" name="vue-simple-message-frame-notification">
       <div
@@ -7,22 +24,9 @@
         class="vue-simple-message-frame-notification"
         :class="'vue-simple-message-frame-notification-' + type"
       >
-        <i class="vue-simple-message-frame-close-btn" @click.stop="onClose(id)">
-          <svg
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            width="18px"
-            height="18px"
-            viewBox="0 0 24 24"
-            aria-labelledby="closeIconTitle"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            fill="none"
-            stroke="rgba(0, 0, 0, 0.6)"
-          >
-            <title id="closeIconTitle">Close</title>
-            <path d="M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575" />
+        <i class="vue-simple-message-frame-close-btn" title="Close" @click.stop="onClose(id)">
+          <svg>
+            <use xlink:href="#simpleMessageCloseIcon"></use>
           </svg>
         </i>
         <div class="vue-simple-message-frame-content">{{ content }}</div>
