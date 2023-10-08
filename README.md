@@ -27,7 +27,6 @@ in `.vue` file:
 
 <script setup>
 import { ref } from 'vue';
-import type { NotificationItem } from 'vue-simple-message';
 
 const list = ref([]);
 </script>
