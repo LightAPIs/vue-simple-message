@@ -110,5 +110,6 @@ function onClose(id: string) {
 }
 .vue-simple-message-frame-content {
   margin-top: 5px;
+  word-break: break-all;
 }
 </style>
