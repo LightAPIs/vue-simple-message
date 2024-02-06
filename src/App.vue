@@ -1,5 +1,10 @@
 <template>
-  <button type="button" @click="onTest">Test</button>
+  <button type="button" @click="onTest()">Test Random</button>
+  <button type="button" @click="onTest('info')">Test Info</button>
+  <button type="button" @click="onTest('warn')">Test Warn</button>
+  <button type="button" @click="onTest('error')">Test Error</button>
+  <button type="button" @click="onTest('debug')">Test Dubug</button>
+  <button type="button" @click="onTest(undefined, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')">Test Long Message</button>
   <simple-message :list="notifications" @close="onClose"></simple-message>
 </template>
 
@@ -23,13 +28,13 @@ function randomType(): NotificationType {
   }
 }
 
-function onTest() {
+function onTest(type?: NotificationType, content?: string) {
+  type = type || randomType();
   count.value++;
-  const type = randomType();
   notifications.value.push({
     id: count.value.toString(),
     type,
-    content: `${type} content: ${count.value}`,
+    content: content || `${type} content: ${count.value}`,
   });
 }
 
