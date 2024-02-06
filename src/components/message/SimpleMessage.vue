@@ -108,6 +108,10 @@ function onClose(id: string) {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
+.vue-simple-message-frame-close-btn svg {
+  width: 18px;
+  height: 18px;
+}
 .vue-simple-message-frame-content {
   margin-top: 5px;
   word-break: break-all;
