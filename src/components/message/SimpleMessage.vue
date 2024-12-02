@@ -1,22 +1,22 @@
 <template>
-  <div style="display: none">
-    <svg
-      id="simpleMessageCloseIcon"
-      role="img"
-      xmlns="http://www.w3.org/2000/svg"
-      width="18px"
-      height="18px"
-      viewBox="0 0 24 24"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      fill="none"
-      stroke="currentColor"
-    >
-      <path d="M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575" />
-    </svg>
-  </div>
   <div class="vue-simple-message-frame-presentation">
+    <div style="display: none">
+      <svg
+        id="simpleMessageCloseIcon"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        fill="none"
+        stroke="currentColor"
+      >
+        <path d="M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575" />
+      </svg>
+    </div>
     <transition-group tag="div" name="vue-simple-message-frame-notification">
       <div
         v-for="{ id, type, content } in list"
