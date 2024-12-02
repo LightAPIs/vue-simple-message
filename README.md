@@ -1,5 +1,9 @@
 # vue-simple-message
 
+## Preview
+
+![preview](https://gcore.jsdelivr.net/gh/dragonish/images@main/img/202412022058827.jpg)
+
 ## Installation
 
 ```shell
@@ -8,17 +12,21 @@ npm install vue-simple-message
 
 ## Usage
 
-in `.js`/`.ts` file:
+### Global registration
+
+In the entry file:
 
 ```typescript
+import { createApp } from 'vue';
 import SimpleMessage from 'vue-simple-message';
+import App from './App.vue';
 
-// ...
-app.use(SimpleMessage)
-// ...
+const app = createApp(App);
+app.use(SimpleMessage);
+app.mount('#app');
 ```
 
-in `.vue` file:
+Example usage:
 
 ```html
 <template>
@@ -32,7 +40,7 @@ const list = ref([]);
 </script>
 ```
 
-or
+### Direct import
 
 ```html
 <template>
@@ -41,7 +49,7 @@ or
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import type { NotificationItem } from 'vue-simple-message';
+import { SimplePagination, type NotificationItem } from 'vue-simple-message';
 
 const list = ref<NotificationItem[]>([]);
 
