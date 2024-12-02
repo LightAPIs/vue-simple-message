@@ -11,7 +11,7 @@
       stroke-linecap="round"
       stroke-linejoin="round"
       fill="none"
-      stroke="rgba(0, 0, 0, 0.6)"
+      stroke="currentColor"
     >
       <path d="M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575" />
     </svg>
@@ -105,7 +105,8 @@ function onClose(id: string) {
   top: 4px;
   width: 18px;
   height: 18px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
   cursor: pointer;
 }
 .vue-simple-message-frame-close-btn svg {
