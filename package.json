@@ -1,7 +1,7 @@
 {
   "name": "vue-simple-message",
   "private": false,
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "A Vue component that displays notification messages",
   "type": "module",
   "license": "MIT",
