@@ -62,12 +62,14 @@ function onClose(id: string) {
 ### Types
 
 ```typescript
-type NotificationType = 'info' | 'warn' | 'error' | 'debug';
+type NotificationType = 'info' | 'warn' | 'error' | 'debug' | 'custom';
 
 interface NotificationItem {
   id: string;
   type: NotificationType;
   content: string;
+  color?: string;
+  background?: string;
 }
 ```
 

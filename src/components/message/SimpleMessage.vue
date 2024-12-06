@@ -19,10 +19,11 @@
     </div>
     <transition-group tag="div" name="vue-simple-message-frame-notification">
       <div
-        v-for="{ id, type, content } in list"
+        v-for="{ id, type, content, color, background } in list"
         :key="id"
         class="vue-simple-message-frame-notification"
         :class="'vue-simple-message-frame-notification-' + type"
+        :style="{ color: color, background: background }"
       >
         <i class="vue-simple-message-frame-close-btn" title="Close" @click.stop="onClose(id)">
           <svg>
